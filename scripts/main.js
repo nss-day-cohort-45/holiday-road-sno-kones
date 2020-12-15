@@ -3,8 +3,11 @@ import { ParksSelect } from "./parks/parkSelect.js"
 
 ParksSelect()
 
-import { EateriesDialog, EateriesSelect } from "./eateries/EaterySelect.js";
+import { EateriesSelect } from "./eateries/EaterySelect.js";
+import { showSelection } from "./eateries/EateriesSelect.js";
+
 
 EateriesSelect();
 EateriesDialog();
 ParkList()
+// showSelection();
