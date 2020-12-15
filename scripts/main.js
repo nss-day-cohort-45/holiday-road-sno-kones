@@ -1,3 +1,4 @@
-import { EateriesSelect } from "./eateries/EaterySelect.js";
+import { EateriesDialog, EateriesSelect } from "./eateries/EaterySelect.js";
 
-EateriesSelect()
+EateriesSelect();
+EateriesDialog();
