@@ -9,6 +9,7 @@ export const getEateries = () => {
         parsedEateries => {
             console.table(parsedEateries)
             eateries = parsedEateries
+            
         }
     )
 }
