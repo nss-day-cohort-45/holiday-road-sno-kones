@@ -2,6 +2,7 @@ import { useBizzarie, getBizzarie } from "./AttractionProvider.js"
 
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".attractionsDropDown")
+const attractionElement = document.querySelector("#attractionsContainer")
 const eventHub = document.querySelector(".container") 
 
 
@@ -45,7 +46,8 @@ const render = bizzariesCollection => {
                 </option>`
                 })
             }
-        </select>
+            </select>
+            <button id='showbizzaries'>Show Details</button>
     `
         }
 
