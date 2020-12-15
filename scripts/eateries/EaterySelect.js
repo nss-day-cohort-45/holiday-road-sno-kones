@@ -48,7 +48,7 @@ eventHub.addEventListener("eateriesBtnClicked", (event) => {
 
         dialogText.innerHTML =`
         <h3>${selectedEatery.businessName}<h3></h3>
-        ${eateriesEatery.map( (eatery) => `
+        ${selectedEatery.map( (eatery) => `
         <div>${eatery.description}</div>
         <h4>${eatery.city}, ${eatery.state}</h4>
         <div>${eatery.amenities}</div>`
@@ -77,3 +77,7 @@ eventHub.addEventListener("click", (event) => {
         eventHub.dispatchEvent(customEvent)
     }
 })
+
+
+
+//make change event in the dropdown that shows details of the selected event
