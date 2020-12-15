@@ -1,5 +1,5 @@
-import { EateriesSelect } from "./eateries/EaterySelect.js";
 
+<<<<<<< HEAD
 
 /* import { bizzarieSelect } from "./attractions/AttractionSelect.js"
 bizzarieSelect()  */
@@ -11,3 +11,13 @@ EateriesSelect()
 getBizzarie()
 bizzarieSelect()
  
+=======
+import { ParksSelect } from "./parks/parkSelect.js"
+
+ParksSelect()
+
+import { EateriesDialog, EateriesSelect } from "./eateries/EaterySelect.js";
+
+EateriesSelect();
+EateriesDialog();
+>>>>>>> main
