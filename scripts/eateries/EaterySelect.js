@@ -1,14 +1,15 @@
+import { eateryHTMLConverter } from "./Eateries.js"
 import { getEateries, useEateries} from "./EateryProvider.js"
 
 const contentTarget = document.querySelector(".eateriesDropDown")
 
 export const EateriesSelect = () => {
     getEateries()
-    .then(() => { const eateries = useEateries()
+    .then(() => { let eateries = useEateries()
     render(eateries)
     })
 }
-
+const eventHub = document.querySelector(".container")
 const render = eateriesCollection => {
     
     contentTarget.innerHTML = `
@@ -22,62 +23,22 @@ const render = eateriesCollection => {
                 )
             }
         </select>
-        <button type="button value=${eateriesCollection.map((eatery) => ` "${eatery.id}"`)}>Selection Details</button>
+        
     </section>
     `
 
 }
 
-const eventHub = document.querySelector(".container")
-
-eventHub.addEventListener("click", (event) => {
-    if (event.target.id === "closeDialog") {
-        eateriesDialog.close();
-    }
-})
-
-eventHub.addEventListener("eateriesBtnClicked", (event) => {
-    const eateriesDialog = document.querySelector("#eateriesDialog")
-
-    const dialogText = document.querySelector("#eateriesDialog__text")
-    
-    const eateries = useEateries()
-    
-    const selectedEatery = eateries.find( 
-        (eatery) => eatery.id === parseInt(event.detail.SelectedEateryId))
-
-        dialogText.innerHTML =`
-        <h3>${selectedEatery.businessName}<h3></h3>
-        ${selectedEatery.map( (eatery) => `
-        <div>${eatery.description}</div>
-        <h4>${eatery.city}, ${eatery.state}</h4>
-        <div>${eatery.amenities}</div>`
-        ).join("")}`
-
-    eateriesDialog.showModal()
-})
-
-export const EateriesDialog = () => {
-    return`
-        <dialog id="eateriesDialog">
-            <div id="associatesDialog__text"></div>
-            <button id="closeDialog">Close</button>
-        </dialog>
-        `
-}
-
-
-eventHub.addEventListener("click", (event) => {
-    if (event.target.id === "eateriesBtnClicked") {
-        const customEvent = new CustomEvent("eateriesBtnClicked", {
+eventHub.addEventListener( "change", event => {
+    if (event.target.id === "eaterySelect") {
+        const customEvent = new CustomEvent("eaterySelected", {
             detail: {
-                SelectedEateryId: event.target.id
+                eateryThatWasChosen:event.target.value
             }
         })
         eventHub.dispatchEvent(customEvent)
     }
 })
-
 
 
 //make change event in the dropdown that shows details of the selected event
