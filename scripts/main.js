@@ -1,5 +1,9 @@
-import { EateriesSelect } from "./eateries/EaterySelect.js";
+
 import { ParksSelect } from "./parks/parkSelect.js"
 
-EateriesSelect()
 ParksSelect()
+
+import { EateriesDialog, EateriesSelect } from "./eateries/EaterySelect.js";
+
+EateriesSelect();
+EateriesDialog();
