@@ -18,11 +18,3 @@ export const getParks = () => {
 
 
 
-// Uncaught (in promise) TypeError: parks.slice is not a function
-//     at useParks (ParkProvider.js:3)
-//     at parkSelect.js:7
-// useParks @ ParkProvider.js:3
-// (anonymous) @ parkSelect.js:7
-// Promise.then (async)
-// ParksSelect @ parkSelect.js:7
-// (anonymous) @ main.js:5
