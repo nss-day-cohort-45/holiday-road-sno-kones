@@ -10,4 +10,7 @@ import "./eateries/EateriesSelect.js"
 EateriesSelect();
 
 
+import { BizarreriesSelect} from "./attractions/AttractionSelect.js"
+import "./attractions/AttractionList.js"
 
+BizarreriesSelect()

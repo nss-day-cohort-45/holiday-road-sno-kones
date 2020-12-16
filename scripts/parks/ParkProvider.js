@@ -1,3 +1,6 @@
+// const parkApi = require('parkApi').config()
+// import {settings} from "../Settings.js"
+
 let parks = []
 
 export const useParks = () => parks.slice()
