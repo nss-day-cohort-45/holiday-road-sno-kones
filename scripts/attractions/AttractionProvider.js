@@ -1,17 +1,15 @@
-let attractions = []
+let bizarreries = []
 
-export const useBizzarie = () => {
-    return attractions.slice()
-}
+export const useBizarreries = () => bizarreries.slice()
 
-export const getBizzarie = () => {
+export const getBizarreries = () => {
     return fetch("http://holidayroad.nss.team/bizarreries")
     .then(response => response.json())
     .then(
-        parsedAttractions => { 
-        console.table(parsedAttractions) 
-            attractions = parsedAttractions
+        parsedBizarreries => { 
+        console.table(parsedBizarreries) 
+            bizarreries = parsedBizarreries
     }
     )
 } 
-
+ 
