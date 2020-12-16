@@ -1,11 +1,10 @@
-export const ParksHTMLConverter = (parks) => {
-    return `
-        <section class="parks">
-            <h1 class="parksName">${parks.fullName}</h1>
-            <div class="parksContacts">${parks.contacts}</div>
-            <div class="parksAddress">${parks.addresses}</div>
-            <div class="parksHours">${parks.operatingHours}</div>
-            <div class="parksDescription">${parks.description}</div>
-        </section>
-    `
+export const parkHTMLConverter = (park) => {
+  return `
+  <h2 class="parkName">${park.fullName}<h2></h2>
+  <div class="parkDirection">${park.directionsUrl}</div>
+  <h4 class"parkLocation">${park.addresses.city}, ${park.addresses.stateCode}</h4>
+  <div class="parkDescription">${park.description}</div>
+  
+ `
+
 }

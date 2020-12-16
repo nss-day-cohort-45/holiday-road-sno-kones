@@ -1,13 +1,13 @@
-import { BizarreriesSelect} from "./attractions/AttractionSelect.js"
+
 import { ParksSelect } from "./parks/parkSelect.js"
+import "./parks/parksList.js"
+ParksSelect();
+
 import { EateriesSelect } from "./eateries/EaterySelect.js";
-import { showSelection } from "./eateries/EateriesSelect.js";
-import { ShowSelection } from "./attractions/AttractionList.js"
-import "./attractions/AttractionList.js"
+import "./eateries/EateriesSelect.js"
 
 BizarreriesSelect()
-ParksSelect() 
-EateriesSelect();
+EateriesSelect()
 
-
-
+import { BizarreriesSelect} from "./attractions/AttractionSelect.js"
+import "./attractions/AttractionList.js"
