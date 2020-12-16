@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+}
+
+.title {
+    display: flex;
+    margin-left: 50%;
+}
+.eateriesDropDown {
+    margin-left: 10%;
+}
+.eateryCards {
+    display:inline-block;
+    justify-content:center;
+    text-align: center;
+    border: 2px solid hotpink;
+    max-width: 50%;
+    margin-left: 35%;
+}
