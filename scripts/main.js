@@ -11,3 +11,6 @@ EateriesSelect()
 
 import { BizarreriesSelect} from "./attractions/AttractionSelect.js"
 import "./attractions/AttractionList.js"
+
+
+//Only save the ID for itenerarys
