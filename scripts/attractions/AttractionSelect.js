@@ -29,7 +29,7 @@ const render = bizarreriesCollection => {
         
 }
         
-eventHub.addEventListener( "change", event => {
+contentTarget.addEventListener( "change", event => {
     if (event.target.id === "bizarrerieSelect") {
         const customEvent = new CustomEvent("bizarrerieSelected", {
             detail: {

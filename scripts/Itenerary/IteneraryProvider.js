@@ -2,7 +2,7 @@ const eventHub = document.querySelector(".container")
 let iteneraries = []
 
 const dispatchStateChangeEvent = () => {
-  const iteneraryStateChangedEvent = new CustomEvent(iteneraryStateChanged)
+  const iteneraryStateChangedEvent = new CustomEvent("iteneraryStateChanged")
 
   eventHub.dispatchEvent(iteneraryStateChangedEvent)
 }
@@ -18,7 +18,7 @@ export const getIteneraries = () => {
 }
 
 export const saveItenerary = itenerary => {
-  return fetch('http://localhost:8088/db', {
+  return fetch('http://localhost:8088/itineraries', {
       method: "POST",
       headers: {
           "Content-Type": "application/json"

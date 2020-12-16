@@ -1,3 +1,3 @@
 import { saveItenerary } from "./IteneraryProvider.js"
 
-const contentTarget = document.querySelector(".")
+const eventHub = document.querySelector(".container")
