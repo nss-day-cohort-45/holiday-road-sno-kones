@@ -6,11 +6,8 @@ ParksSelect();
 import { EateriesSelect } from "./eateries/EaterySelect.js";
 import "./eateries/EateriesSelect.js"
 
-
-EateriesSelect();
-
+BizarreriesSelect()
+EateriesSelect()
 
 import { BizarreriesSelect} from "./attractions/AttractionSelect.js"
 import "./attractions/AttractionList.js"
-
-BizarreriesSelect()
