@@ -2,11 +2,11 @@
 
 export const bizarrerieHTMLConverter = (bizarreries) => {
     return `
-    <h2 class="bizarreriesName">${bizarreries.name}</h2>
-    <div>bizarreriesDescription: ${bizarreries.description}</div>
-    <div>bizarreriesLocation: ${bizarreries.city}, ${bizarreries.state}</div>
-    <div>bizarreriesRestroom: ${bizarreries.amenities.restroom}</div>
-    <div>bizarreriesSouvenirs: ${bizarreries.amenities.souvenirs}</div>
+    <h2 class="Bizarrerie Name">${bizarreries.name}</h2>
+    <div>Description: ${bizarreries.description}</div>
+    <div>Location: ${bizarreries.city}, ${bizarreries.state}</div>
+    <div>Restrooms: ${bizarreries.ameneties.restrooms}</div>
+    <div>Souvenirs: ${bizarreries.ameneties.souvenirs}</div>
  `  
 }    
 /*     export const attractionHTMLConverter = (attraction) => {
