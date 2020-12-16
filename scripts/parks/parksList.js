@@ -1,41 +1,34 @@
-import {ParksHTMLConverter} from "./parks.js"
+import { parkHTMLConverter } from "./parks.js"
 import { getParks, useParks} from "./ParkProvider.js"
 
-
-
-
-const parksElement = document.querySelector(".parkCards")
 const eventHub = document.querySelector(".container")
+const contentTarget = document.querySelector(".parkCards")
 
 
 
-
-const render = (parks) => {
-    let parkCards= []
-    for (const park of parks) {
-        parkCards.push(ParksHTMLConverter(park))
-   }
-parksElement.innerHTML = parkCards.join("")
-}
-
-
-export const ParkList = () => {
-    getParks()
-        .then(() => {
-            const allParks = useParks()
-            render(allParks)
-        })
-}
-
-eventHub.addEventListener("parkChosen", event => {
+eventHub.addEventListener("parkSelected", event => {
+   if (event.detail.parkThatWasChosen !== "0") {
     
-
-if (event.detail.parkThatWasChosen !=='0'){
-
     const parks = useParks()
-    const park = parks.find( (park) => park.id === parseInt(event.detail.parkThatWasChosen))
     
-    ParkList(park)
+    const selectedPark = parks.find( 
+        (park) => park.id === event.detail.parkThatWasChosen)
 
-}
+       
+
+     console.log(selectedPark)  
+    showSelection(selectedPark);
+  } 
 })
+
+
+
+export const showSelection = (selectedPark) => {
+    let parkCards = [];
+
+     {
+        parkCards.push(parkHTMLConverter(selectedPark))
+    }
+
+    contentTarget.innerHTML = parkCards.join("")
+}

@@ -1,23 +1,9 @@
-const eventHub = document.querySelector(".container")
+export const parkHTMLConverter = (park) => {
+  return `
+  <h2 class="parkName">${park.fullName}<h2></h2>
+  <div class="parkDescription">${park.directionsUrl}</div>
+  <h4 class"parkLocation">${park.city}, ${park.stateCode}</h4>
+  
+ `
 
-eventHub.addEventListener("click", (event) => {
-  if (event.target.id.includes("parks--")) {
-    const customEvent = new CustomEvent("parksBtnClicked", {
-      detail: {
-        clickedParkId: event.target.id.split("--")[1]
-      }
-    })
-    eventHub.dispatchEvent(customEvent)
-  }
-})
-
-
-export const ParksHTMLConverter = (parks) => {
-    return `
-        <section class="parks">
-            <h1 class="parksName">${parks.fullName}</h1>
-            <div class="parksAddress">${parks.addresses}</div>
-            <button id='park--${parks.id}'>Show Details</button>
-        </section>
-    `
 }

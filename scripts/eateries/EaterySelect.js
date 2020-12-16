@@ -1,5 +1,5 @@
-import { eateryHTMLConverter } from "./Eateries.js"
-import { getEateries, useEateries} from "./EateryProvider.js"
+import { eateryHTMLConverter } from "./eateries.js"
+import { getEateries, useEateries} from "./eateryProvider.js"
 
 const contentTarget = document.querySelector(".eateriesDropDown")
 

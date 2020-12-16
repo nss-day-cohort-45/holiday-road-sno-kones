@@ -1,6 +1,5 @@
+import { parkHTMLConverter } from "./parks.js"
 import { getParks, useParks} from "./ParkProvider.js"
-
-const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".parksDropDown")
 
 export const ParksSelect = () => {
@@ -9,33 +8,34 @@ export const ParksSelect = () => {
     render(parks)
     })
 }
-
-const render = ParksCollection => {
+const eventHub = document.querySelector(".container")
+const render = parksCollection => {
     
     contentTarget.innerHTML = `
-    <select class="dropdown" id="parksSelect">
-        <option value="0">Please select an park...</option>
-        ${
-            ParksCollection.map((park) => `
+    <section class="parkDetails">
+        <select class="dropdown" id="parkSelect">
+            <option value="0">Please select a park...</option>
+            ${
+                parksCollection.map((park) => `
           
-                <option value= "${park.id}">"${park.fullName}"</option>`
-            )
-        }
+                    <option value= "${park.id}">"${park.fullName}"</option>`
+                )
+            }
         </select>
-
+        
+    </section>
     `
 
 }
 
-
-
-eventHub.addEventListener("change", event => {
-    if (event.target.id === "parkSelect")  {
-        const customEvent = new CustomEvent('parkChosen', {
+eventHub.addEventListener( "change", event => {
+    if (event.target.id === "parkSelect") {
+        const customEvent = new CustomEvent("parkSelected", {
             detail: {
-                parkThatWasChosen: event.target.value
+                parkThatWasChosen:event.target.value
             }
         })
         eventHub.dispatchEvent(customEvent)
     }
 })
+
