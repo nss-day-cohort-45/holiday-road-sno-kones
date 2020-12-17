@@ -11,3 +11,7 @@ EateriesSelect()
 
 import { BizarreriesSelect} from "./attractions/AttractionSelect.js"
 import "./attractions/AttractionList.js"
+
+import { saveButton } from "./Itenerary/ItineraryButton.js";
+saveButton()
+//Only save the ID for itenerarys
