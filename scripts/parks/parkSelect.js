@@ -28,7 +28,7 @@ const render = parksCollection => {
 
 }
 
-eventHub.addEventListener( "change", event => {
+contentTarget.addEventListener( "change", event => {
     if (event.target.id === "parkSelect") {
         const customEvent = new CustomEvent("parkSelected", {
             detail: {

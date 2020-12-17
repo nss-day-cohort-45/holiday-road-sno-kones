@@ -29,7 +29,7 @@ const render = eateriesCollection => {
 
 }
 
-eventHub.addEventListener( "change", event => {
+contentTarget.addEventListener( "change", event => {
     if (event.target.id === "eaterySelect") {
         const customEvent = new CustomEvent("eaterySelected", {
             detail: {
