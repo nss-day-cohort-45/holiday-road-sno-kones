@@ -9,6 +9,7 @@ export const ItineraryList = () => {
     getItinerary()
         .then(() => {
             const allItinerary = useItinerary()
+            console.log(allItinerary)
             render(allItinerary)
         })
 }
