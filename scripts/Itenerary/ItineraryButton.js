@@ -34,3 +34,5 @@ eventHub.addEventListener("eaterySelected", event => {
 eventHub.addEventListener("bizarrerieSelected", event => {
   iteneraryStateObject.attractionId = parseInt(event.detail.bizarrerieThatWasChosen)
 })
+
+
