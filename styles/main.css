@@ -4,7 +4,29 @@
  }
 
 body {
-    background-color: turquoise;
+    background-color: forestgreen;
+    border: black 5px solid;
+}
+
+.logo {
+    border-bottom: black 5px solid;
+    border-right: black 5px solid;
+}
+
+
+.title {
+    display: flex;
+    margin-left: 40%;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+.titleInfo {
+    display: flex;
+    margin-left: 40%;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
 }
 
 .container {
@@ -14,15 +36,23 @@ body {
     max-width: 50%;
     margin-left: 25%;
     min-height: 100vh;
-    
+    border: black 3px solid;
     
 }
 
-.title {
-    display: flex;
-    margin-left: 40%;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 50px;
+.parks {
+    max-block-size: 50%;
+}
+
+.eateries {
+    max-block-size: 50%;
+    margin-top: 25%;
+}
+
+.attractions {
+    max-block-size: 50%;
+    margin-top: 25%;
+    margin-bottom: 25%;
 }
 .eateriesDropDown,
 .bizarreriesDropDown,
@@ -68,4 +98,9 @@ body {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
+}
+
+.copyright {
+    font-style: italic;
+    font-weight: bolder;
 }
