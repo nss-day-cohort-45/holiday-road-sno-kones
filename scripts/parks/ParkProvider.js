@@ -12,7 +12,7 @@ export const getParks = () => {
         parsedParks => {
             console.table(parsedParks)
             parks = parsedParks.data
-            console.log(parks)
+    
         }
     )
 }

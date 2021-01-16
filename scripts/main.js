@@ -15,3 +15,8 @@ import "./attractions/AttractionList.js"
 import { saveButton } from "./Itenerary/ItineraryButton.js";
 saveButton()
 //Only save the ID for itenerarys
+
+import {ShowItineraryButton} from "./Itenerary/showItineraryButton.js"
+ShowItineraryButton()
+
+import "./Itenerary/IteneraryList.js"
